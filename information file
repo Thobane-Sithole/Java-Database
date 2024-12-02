@@ -1,0 +1,60 @@
+DBTest - Car Database Application
+Overview
+DBTest is a Java-based application that interacts with a Derby database to manage and display information about cars. The application connects to the database and allows users to query and analyze various car-related data, such as car makes, model years, prices, and more. It provides a simple menu-driven interface to perform various operations.
+
+Features
+Display All Car Makes - Lists all unique car makes stored in the database.
+Find Oldest Model - Identifies the oldest car model based on the manufacture_year.
+Total Value of All Cars - Calculates the total value of all cars in the database.
+Most Expensive Car - Finds the car with the highest price.
+Least Expensive Car - Finds the car with the lowest price.
+Exit - Exits the program.
+Requirements
+Java 8 or higher
+Apache Derby (or any database of your choice with appropriate configurations)
+Database Configuration
+The application is set up to use an Apache Derby database. The connection URL used in the code is:
+
+java
+Copy code
+String dbUrl = "jdbc:derby://localhost:1527/Cars";
+Make sure to replace this with the actual URL if you're using a different database or path. You will need a database called Cars with the following table structure:
+
+CARS Table Structure
+Column	Data Type
+make	VARCHAR(255)
+model	VARCHAR(255)
+manufacture_year	INT
+price	DOUBLE
+How to Run
+Clone the Repository:
+
+Setup Database:
+
+Ensure you have the Derby database installed.
+Set up the Cars database and add data using appropriate SQL commands.
+Compile the Code:
+
+bash
+Copy code
+javac DBTest.java
+Run the Program:
+
+bash
+Copy code
+java DBTest
+Follow the on-screen instructions to choose different operations from the menu.
+
+Example Output
+text
+Copy code
+Menu:
+1. Display all car make
+2. Find oldest model
+3. Total value of all cars
+4. Most expensive car
+5. Least expensive car
+6. Exit
+Choose an option: 
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
